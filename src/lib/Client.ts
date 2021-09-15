@@ -66,10 +66,6 @@ class Client implements IClient {
   }
 
   async fetchRepos(page: number): Promise<IRepoResultSet> {
-    console.log(await this.octokit.rateLimit.get())
-
-    return []
-
     const cache = await this.getCache(page)
 
     if (cache.repos?.length && cache.total > 0) return cache

@@ -40,7 +40,7 @@ const Dropdown: FunctionComponent<DropdownProps> = ({
           leaveFrom="transform opacity-100 translate-y-0"
           leaveTo="transform opacity-0 -translate-y-1"
         >
-          <Menu.Items className="overflow-hidden shadow-sm absolute right-0 w-56 origin-top-right bg-white divide-y divide-gray-300 rounded-md border-gray-300 border focus:outline-none">
+          <Menu.Items className="z-30 overflow-hidden shadow-sm absolute right-0 w-56 origin-top-right bg-white divide-y divide-gray-300 rounded-md border-gray-300 border focus:outline-none">
             {options.map((option) => (
               <Menu.Item key={option.value}>
                 {({ active }) => (

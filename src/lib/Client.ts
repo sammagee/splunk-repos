@@ -136,10 +136,7 @@ class Client implements IClient {
         page: 1,
       })
 
-      console.log(commit)
-
-      return null
-      // return data?.commit?.[0]?.author?.id || null
+      return commit?.[0]?.author?.id || null
     } catch (err) {
       console.error(err)
     }

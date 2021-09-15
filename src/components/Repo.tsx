@@ -70,7 +70,14 @@ const Repo: FunctionComponent<RepoProps> = ({ repo }) => {
         </div>
 
         {/* Latest Contributor ID */}
-        <div className="inline-flex items-center space-x-0.5">
+        <div
+          className="inline-flex items-center space-x-0.5"
+          title={
+            !repo.latest_contributor
+              ? 'Latest Contributor does not have a GitHub ID'
+              : undefined
+          }
+        >
           <svg
             className="h-3 w-3"
             fill="none"
